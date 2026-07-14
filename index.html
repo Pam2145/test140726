@@ -1,9 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen YouTube Embed</title>
+  <style>
+    /* This CSS forces the body and iframe to take up 100% of the viewport stretch */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Prevents scrollbars from appearing */
+      background-color: #000; /* Black background matches video bars */
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none; /* Removes the default ugly frame border */
+    }
+  </style>
+</head>
 <body>
 
-<iframe width="420" height="345" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1">
-</iframe>
+  <iframe 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" 
+    allow="autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
 
 </body>
 </html>
